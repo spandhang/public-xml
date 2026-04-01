@@ -21,11 +21,11 @@
 <div class="report_row align_space-between">
 <div class="report_field two_column_feild align_space-between">
 <div class="field_name">StartDate</div>
-<div class="field_value">{{InspectionProcessMetricsDetails.StartDate}}</div>
+<div class="field_value">{{InspectionProcessMetricsDetails.StartDate}}</div>
 </div>
 <div class="report_field two_column_feild align_space-between">
 <div class="field_name">AttemptUnit</div>
-<div class="field_value">{{InspectionProcessMetricsDetails.AttemptUnit}}</div>
+<div class="field_value">{{InspectionProcessMetricsDetails.AttemptUnit}}</div>
 </div>
 </div>
 <br />
@@ -35,18 +35,18 @@
 <br />
 <div class="report_row align_center make_bold make_italic">Deficiency 
 List</div>
-<div class="report_row align_space-between" ng-repeat="item in reportVar.deficiencyList">
+<div class="report_row align_space-between" ng-repeat="item in reportVar.deficiencyList">
 <div class="field_name make_bold">{{item.deficiencytext}}</div>
 <div class="field_value make_italic">{{item.deficiencydesc}} </div>
-<div class="report_row" ng-if="!reportVar.deficiencyList.length">There is no deficiency</div>
+<div class="report_row" ng-if="!reportVar.deficiencyList.length">There is no deficiency</div>
 <br />
 <div class="report_row align_center">Inspection Checklist</div>
-<div class="report_row align_space-between" ng-repeat="item in reportVar.checkList">
+<div class="report_row align_space-between" ng-repeat="item in reportVar.checkList">
 <div class="field_name">{{item.checklistdesc}}</div>
 <div class="field_value" ng-if="item.notapplicableflag 
 ==='Y'">NA</div>
-<div class="field_value" ng-if="item.passed === 'Y' && item.notapplicableflag !== 'Y'">Passed</div>
-<div class="field_value" ng-if="item.passed !=='Y' && item.notapplicableflag !== 'Y'">Fail</div>
+<div class="field_value" ng-if="item.passed === 'Y' && item.notapplicableflag !== 'Y'">Passed</div>
+<div class="field_value" ng-if="item.passed !=='Y' && item.notapplicableflag !== 'Y'">Fail</div>
 </div>
 <div class="report_row" ng-if="!reportVar.checkList.length">There is 
   no checklist</div>
