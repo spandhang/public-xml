@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportList>
+<Report>
+<foldertype></foldertype>
+<processcode></processcode>
+<reportname>Custom</reportname>
+<reportdescription>This is Custom Report</reportdescription>
+<displayflag>Y</displayflag>
+<reporttemplate>
+<![CDATA[
+<div>
+<br />
+ <div class="report_row align_right make_bold">Sample Report</div>
+ <br /> 
+ <div class="report_row ">
+ <div class="field_name ">Folder RSN</div>
+ <div class="field_value ">{{FolderDetails[0].FolderNumber}}
+ </div>
+ </div>
+<br />
+<div class="report_row align_space-between">
+<div class="report_field two_column_feild align_space-between">
+<div class="field_name">StartDate</div>
+<div class="field_value">{{InspectionProcessMetricsDetails.StartDate}}</div>
+</div>
+<div class="report_field two_column_feild align_space-between">
+<div class="field_name">AttemptUnit</div>
+<div class="field_value">{{InspectionProcessMetricsDetails.AttemptUnit}}</div>
+</div>
+</div>
+<br />
+<div class="report_row">
+<img id="inspectorSignature" style="width:150px" ng-if="signatureImageData !== 'data:image/png;base64,'"src="{{signatureImageData}}" />
+<div class="default_image" ng-if="signatureImageData === 
+'data:image/png;base64,'"></div>
+</div>
+<br />
+<div class="report_row align_space-between ">
+<div class="report_field two_column_field vertical_align_center">
+<div class="field_name"> Date: </div>
+<div class="field_value"> {{InspectionProcessMetricsDetails.AttemptSignDate}} </div>
+</div>
+<div class="report_field"> <img id="inspectorSignature" ng-if="signatureImageData" src="{{signatureImageData}}" />
+<div class="default_image" ng-if="!signatureImageData"></div>
+</div>
+Sample Report
+granicus.com | AMANDA 2024 225
+Inspector App Reference
+</div>
+<br />
+<div class="report_row align_center make_bold make_italic">Deficiency 
+List</div>
+<div class="report_row align_space-between" ng-repeat="item in reportVar.deficiencyList">
+<div class="field_name make_bold">{{item.deficiencytext}}</div>
+<div class="field_value make_italic">{{item.deficiencydesc}} </div>
+<div class="report_row" ng-if="!reportVar.deficiencyList.length">There is no deficiency</div>
+<br />
+<div class="report_row align_center">Inspection Checklist</div>
+<div class="report_row align_space-between" ng-repeat="item in reportVar.checkList">
+<div class="field_name">{{item.checklistdesc}}</div>
+<div class="field_value" ng-if="item.notapplicableflag 
+==='Y'">NA</div>
+<div class="field_value" ng-if="item.passed === 'Y' && item.notapplicableflag !== 'Y'">Passed</div>
+<div class="field_value" ng-if="item.passed !=='Y' && item.notapplicableflag !== 'Y'">Fail</div>
+</div>
+<div class="report_row" ng-if="!reportVar.checkList.length">There is 
+no checklist</div>
+<br />
+<div class="report_row">Item 1</div>
+<div class="report_row make_bold">Item 2</div>
+<div class="report_row make_italic">Item 3</div>
+<div class="report_row make_underline">Item 4</div>
+<div class="report_row make_underline make_italic make_bold">Item 
+4</div>
+<br />
+<div class="report_row font_xxs">Item 1</div>
+<div class="report_row font_xs">Item 2</div>
+<div class="report_row font_s">Item 3</div>
+<div class="report_row font_m">Item 4</div>
+<div class="report_row font_l">Item 5</div>
+<div class="report_row font_xl">Item 6</div>
+<div class="report_row font_xxl">Item 7</div>
+<br />
+<div class="report_row">Item 1</div>
+<div class="report_row top_indent_xs">Item 2</div>
+<div class="report_row top_indent_s">Item 3</div>
+<div class="report_row top_indent_m">Item 4</div>
+<div class="report_row top_indent_l">Item 5</div>
+<div class="report_row top_indent_xl">Item 6</div>
+<div class="report_row top_indent_xxl">Item 7</div>
+<br />
+<div class="report_row make_border">Item 1</div>
+<div class="report_row">Item 2</div>
+<div class="report_row">Item 3</div>
+<div class="report_row make_border">Item 4</div>
+<div class="report_row">Item 5</div>
+<div class="report_row">Item 6</div>
+Sample Report
+granicus.com | AMANDA 2024 226
+Inspector App Reference
+<div class="report_row">Item 7</div>
+<br />
+<div class="make_border">
+<div class="report_row">Item 1</div>
+<div class="report_row">Item 2</div>
+<div class="report_row">Item 3</div>
+<div class="report_row">Item 4</div>
+<div class="report_row">Item 5</div>
+<div class="report_row">Item 6</div>
+<div class="report_row">Item 7</div>
+</div>
+<br />
+<div class="report_row align_center">Inspection Checklist</div>
+<div class="make_border">
+<div class="report_row align_space-between" ng-repeat="item in reportVar.checkList">
+<div class="field_name">{{item.checklistdesc}}</div>
+<div class="field_value" ng-if="item.notapplicableflag === 
+'Y'">NA</div>
+<div class="field_value" ng-if="item.passed === 'Y' && item.notapplicableflag !== 'Y'">Passed</div>
+<div class="field_value" ng-if="item.passed !== 'Y' && item.notapplicableflag !== 'Y'">Fail</div>
+</div>
+<div class="report_row" ng-if="reportVar.checklist.length">There is no 
+checklist</div>
+</div>
+<br />
+<div class="report_row">Item 1</div>
+<div class="report_row align_center">Item 2</div>
+<div class="report_row align_right">Item 3</div>
+<br />
+<div class="report_row">
+<div class="report_field">Text first</div>
+<div class="report_field">Text second</div>
+</div>
+<div class="report_row align_space-between">
+<div class="report_field">Text first</div>
+<div class="report_field">Text second</div>
+</div>
+<div class="report_row align_center">
+<div class="report_field">Text first</div>
+<div class="report_field">Text second</div>
+</div>
+<div class="report_row align_right">
+<div class="report_field">Text first</div>
+<div class="report_field">Text second</div>
+</div>
+<br />
+<div class="report_row"> Some information is <div class="report_span 
+make_bold">here</div></div>
+<div class="report_row"> Some information is <div class="report_span 
+make_italic">here</div></div>
+
+<div class="report_row"> Some information is <div class="report_span 
+make_underline">here</div></div>
+<div class="report_row"> Some information is <div 
+class="report_span">here</div></div>
+<div class="report_row"> Some information is <div class="report_span 
+font_xxl">here</div></div>
+<br />
+</div>
+]]>
+</reporttemplate>
+<reportType>custom</reportType>
+</Report>
+</ReportList>
+
