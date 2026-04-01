@@ -28,11 +28,7 @@
 <div class="field_value">{{InspectionProcessMetricsDetails.AttemptUnit}}</div>
 </div>
 </div>
-<br />
 
-
-</div>
-<br />
 <div class="report_row align_center make_bold make_italic">Deficiency 
 List</div>
 <div class="report_row align_space-between" ng-repeat="item in reportVar.deficiencyList">
