@@ -43,9 +43,7 @@
 <div class="report_field"> <img id="inspectorSignature" ng-if="signatureImageData" src="{{signatureImageData}}" />
 <div class="default_image" ng-if="!signatureImageData"></div>
 </div>
-Sample Report
-granicus.com | AMANDA 2024 225
-Inspector App Reference
+
 </div>
 <br />
 <div class="report_row align_center make_bold make_italic">Deficiency 
@@ -95,9 +93,7 @@ no checklist</div>
 <div class="report_row make_border">Item 4</div>
 <div class="report_row">Item 5</div>
 <div class="report_row">Item 6</div>
-Sample Report
-granicus.com | AMANDA 2024 226
-Inspector App Reference
+
 <div class="report_row">Item 7</div>
 <br />
 <div class="make_border">
