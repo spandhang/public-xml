@@ -1,110 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ReportList>
   <Report>
-    <!-- Apply to all folder types and processes -->
     <foldertype>ACT</foldertype>
     <processcode>473210</processcode>
-    <reportname>Inspection Report</reportname>
-    <reportdescription>Inspection Report</reportdescription>
+    <reportname>Test Inspection Report</reportname>
+    <reportdescription>Minimal XML Parser Test</reportdescription>
     <displayflag>Y</displayflag>
 
-    <reporttemplate>
-      <![CDATA[
+    <reporttemplate><![CDATA[
+      <div style="font-family: Arial, sans-serif; font-size: 12px;">
+        <h2>AMANDA XML Report – TEST</h2>
 
- <!-- HEADER -->
- <div class="report_row align_space-between">
-    <div>
-       <img src="data:image/png;base64,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" style="height:120px;" />
-        </div>
-        <div class="align_center font_s">
-          <div>1595 Bedford Highway, Suite 224</div>
-          <div>Bedford, N.S. B4A 3Y4</div>
-        </div>
-        <div>
-            <div>Phone:(902) 424-7773</div>
-        </div>
-      </div>
+        <p>
+          <strong>Status:</strong> XML loaded successfully.
+        </p>
 
-      <div class="report_row top_indent_m font_s align_right">
-        <span class="make_bold">Process RSN Number:</span>
-        {{InspectionProcessMetricsDetails.ProcessRSN}}
-      </div>
+        <p>
+          <strong>Process RSN:</strong><br>
+          {{InspectionProcessMetricsDetails.ProcessRSN}}
+        </p>
 
-      <!-- TITLE -->
-      <div class="report_row align_center top_indent_l">
-        <div class="make_bold make_underline make_underlinefont_xl">INSPECTION REPORT</div>
-      </div>
-	  
-	  <!-- SUB TITLE -->
-      <div class="report_row align_center top_indent_l">
-        <div class="make_bold make_underline font_xl">{{folderProcess}}</div>
-      </div>
+        <p>
+          <strong>Folder Number:</strong><br>
+          {{FolderDetails[0].FolderNumber}}
+        </p>
 
-      <!-- INSPECTION DETAILS -->
-      <div class="report_row top_indent_l">
-        <span class="make_bold">APPLICATION / PERMIT NUMBER:</span>
-        {{FolderDetails[0].FolderNumber.substring(0, 15)}}
-      </div>
-    	<!--LINE BREAK-->
-    	<div id="printContent" style="white-space: pre-wrap; visibility:hidden;"> </div>
-     
-	     <!--PEOPLE ROLE-->
-      <div class="report_row">
-        <span class="make_bold">INSPECTEE: </span>
-		    {{PeopleDetails[0].Organization}}
-      </div>
-    	<!--LINE BREAK-->
-     <div id="printContent" style="white-space: pre-wrap; visibility:hidden;"> </div>
-      <div class="report_row">
-        <span class="make_bold">INSPECTION DATE:</span>
-        {{InspectionProcessMetricsDetails.AttemptSignDate}}
-      </div>
-      <!--LINE BREAK-->
-     <div id="printContent" style="white-space: pre-wrap; visibility:hidden;"> </div>
-      <div class="report_row">
-        <span class="make_bold">FACILITY / SITE NAME: </span>
-        {{FolderDetails[0].FolderName}}
-      </div>
-       <!--LINE BREAK-->
-      <div id="printContent" style="white-space: pre-wrap; visibility:hidden;"> </div>
-      <div class="report_row">
-        <span class="make_bold">SITE ADDRESS: </span>
-        {{PropertyDetails[0].Address}}
-      </div>
+        <p>
+          <strong>Inspector:</strong><br>
+          {{ValidUser.UserName}}
+        </p>
 
-      <div class="report_row make_border top_indent_m"></div>
-
-      <!-- OVERVIEW -->
-      <div class="report_row make_underline top_indent_m make_bold">
-        OVERVIEW OF INSPECTION
+        <p>
+          <em>If you can see this text, XML parsing is working.</em>
+        </p>
       </div>
-
-      <div class="report_row">
-        <div style="white-space: pre-wrap;">
-          {{InspectionProcessMetricsDetails.AttemptComment}}
-        </div>
-      </div>
-
-      <!-- FOOTER -->
-      <div class="report_row top_indent_l font_xs">
-        This inspection report was prepared on
-        {{InspectionProcessMetricsDetails.AttemptSignDate}}
-        by {{ValidUser.UserName}} with Nova Scotia Department of Environment
-        and Climate Change.
-      </div>
-
-      <div class="report_row font_xs top_indent_s">
-        Nova Scotia Department of Environment and Climate Change<br/>
-        1595 Bedford Highway, Suite 224<br/>
-        Bedford, N.S. B4A 3Y4<br/>
-        Phone: (902) 424-7773<br/>
-      </div>
-    
-    <div class="report_row font_xs top_indent_s">
-      <span> https://novascotia.ca/nse</span>
-    </div>
-
-      ]]>
-    </reporttemplate>
+    ]]></reporttemplate>
 
     <reportType>CUSTOM</reportType>
   </Report>
